@@ -24,7 +24,7 @@ body {
 
 .rightSide {
   width: 600px;
-  max-height: 50%;
+  max-height: 60%;
   row-gap: 20px;
 }
 
@@ -63,7 +63,7 @@ body {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  gap: 1.3em;
+  gap: 1.5em;
   padding: 8px 30px 0 30px;
   justify-content: center;
   box-shadow: 0 6px 2px rgba(0, 0, 0, 0.2);
@@ -73,16 +73,35 @@ body {
   height: 60px;
   border-radius: 7px;
   border: 1px solid hsl(246, 25%, 77%);
+  text-indent: 25px;
 }
 
-.enterInput:hover {
-  border: 3px solid hsl(358, 74%, 73%);
-  outline: none;
+.iconFN.active {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 30rem;
+}
+
+.iconLN.active {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 30rem;
+}
+
+.iconE.active {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 30rem;
+}
+
+.iconP.active {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 30rem;
 }
 
 .enterInput::placeholder {
   font-weight: bold;
-  padding: 0 0 0 20px;
 }
 
 .claimButton {
@@ -112,4 +131,36 @@ body {
   color: hsl(0, 100%, 74%);
   font-weight: bold;
   cursor: pointer;
+}
+
+#errorFirstName {
+  font-size: 12px;
+  color: hsl(358, 74%, 73%);
+  font-style: italic;
+  text-align: end;
+  display: none;
+}
+
+#errorLastName {
+  font-size: 12px;
+  color: hsl(358, 74%, 73%);
+  font-style: italic;
+  text-align: end;
+  display: none;
+}
+
+#errorEmail {
+  font-size: 12px;
+  color: hsl(358, 74%, 73%);
+  font-style: italic;
+  text-align: end;
+  display: none;
+}
+
+#errorPassword {
+  font-size: 12px;
+  color: hsl(358, 74%, 73%);
+  font-style: italic;
+  text-align: end;
+  display: none;
 }

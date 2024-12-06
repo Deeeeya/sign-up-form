@@ -41,37 +41,49 @@
           thereafter
         </p>
       </div>
-      <div class="inputContainer">
+      <form class="inputContainer" id="inputContainer">
         <input
-          class="enterInput"
+          class="enterInput iconFN"
+          id="first_name"
           placeholder="First Name"
           type="text"
-          required
         />
+        <span id="errorFirstName">First Name cannot be empty</span>
         <input
-          class="enterInput"
+          class="enterInput iconLN"
+          id="last_name"
           placeholder="Last Name"
           type="text"
-          required
         />
+        <span id="errorLastName">Last Name cannot be empty</span>
         <input
-          class="enterInput"
+          class="enterInput iconE"
+          id="email_input"
           placeholder="Email Address"
           type="email"
-          required
         />
+        <span id="errorEmail">Looks like this is not an email</span>
         <input
-          class="enterInput"
+          class="enterInput iconP"
+          id="password_input"
           placeholder="Password"
           type="password"
-          required
         />
-        <button class="claimButton" type="submit">CLAIM YOUR FREE TRIAL</button>
+        <span id="errorPassword">Password cannot be empty</span>
+        <button
+          class="claimButton"
+          id="claimButton"
+          type="submit"
+          onclick="return empty()"
+        >
+          CLAIM YOUR FREE TRIAL
+        </button>
         <p class="submitAgreement">
           By clicking the button, you are agreeing to our
           <a class="termsAndServices">Terms and Services</a>
         </p>
-      </div>
+      </form>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
