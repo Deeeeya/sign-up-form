@@ -20,12 +20,14 @@ body {
 .leftSide {
   width: 550px;
   max-height: 50%;
+  display: none;
 }
 
 .rightSide {
   width: 600px;
   max-height: 60%;
   row-gap: 20px;
+  display: none;
 }
 
 .homeTitle {
@@ -163,4 +165,30 @@ body {
   font-style: italic;
   text-align: end;
   display: none;
+}
+
+.confirmation {
+  width: 900px;
+  height: 350px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid hsl(247, 32%, 48%);
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.checkmark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 10px 0;
+}
+
+.thankYou {
+  text-align: center;
+  line-height: 50px;
+}
+
+.confirmationMessage {
+  text-align: center;
+  padding-top: 30px;
 }
