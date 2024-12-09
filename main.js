@@ -7,6 +7,9 @@ const iconOne = document.querySelector(".iconFN");
 const iconTwo = document.querySelector(".iconLN");
 const iconThree = document.querySelector(".iconE");
 const iconFour = document.querySelector(".iconP");
+const leftie = document.getElementById("leftSide");
+const rightie = document.getElementById("rightSide");
+const confirmationBox = document.getElementById("confirmation");
 
 function empty() {
   if (
@@ -21,6 +24,13 @@ function empty() {
   }
 }
 
+function confirmation(event) {
+  event.preventDefault();
+  leftie.style.display = "none";
+  rightie.style.display = "none";
+  confirmationBox.style.display = "inline";
+}
+
 claimButton.addEventListener("click", function () {
   if (firstName.value == "") {
     empty();
@@ -33,6 +43,7 @@ claimButton.addEventListener("click", function () {
   } else {
     document.getElementById("errorFirstName").style.display = "none";
     firstName.style.border = "1px solid hsl(246, 25%, 77%)";
+    document.getElementById("fname").innerHTML = firstName.value;
   }
 
   if (lastName.value == "") {
@@ -46,6 +57,7 @@ claimButton.addEventListener("click", function () {
   } else {
     document.getElementById("errorLastName").style.display = "none";
     lastName.style.border = "1px solid hsl(246, 25%, 77%)";
+    document.getElementById("lname").innerHTML = lastName.value;
   }
 
   if (emailInput.value == "") {
@@ -59,6 +71,7 @@ claimButton.addEventListener("click", function () {
   } else {
     document.getElementById("errorEmail").style.display = "none";
     emailInput.style.border = "1px solid hsl(246, 25%, 77%)";
+    document.getElementById("ename").innerHTML = emailInput.value;
   }
 
   if (passwordInput.value == "") {
